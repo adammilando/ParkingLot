@@ -43,8 +43,13 @@ namespace ParkingLot.Repository
         {
             var slot = Slots.FirstOrDefault(s => s.NomorSlot == nomorSlot);
             if (slot != null && !slot.IsAvailable()) {
+                double pricePerHour = 2000;
+                TimeSpan duration = DateTime.Now - slot.WaktuParir;
+                int parkDuration = (int)Math.Ceiling(duration.TotalHours);
+                double cost = parkDuration * pricePerHour;
+
                 slot.VehicleOut();
-                Console.WriteLine($"Slot number {nomorSlot} is free");
+                Console.WriteLine($"Slot number {nomorSlot} is free. Vehicle has been parked for {parkDuration} hour. Parking fee: Rp:{cost}");
             }
             else
             {

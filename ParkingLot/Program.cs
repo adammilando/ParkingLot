@@ -17,7 +17,7 @@ namespace ParkingLot
 
             while (true)
             {
-                //Tolong lihat github saya untuk cara menggunakan perintah dibawah ini
+                //Tolong lihat github saya untuk cara menggunakan perintah dibawah ini : 
                 Console.WriteLine("--------------------------------------------------------------------------------");
                 Console.WriteLine("silahkan gunakan perintah yang ada dibawah ini:");
                 Console.WriteLine("\tpark");
@@ -25,7 +25,7 @@ namespace ParkingLot
                 Console.WriteLine("\tstatus");
                 Console.WriteLine("\ttype_of_vehicles");
                 Console.WriteLine("\tregistration_numbers_for_vehicles_with_odd_plate");
-                Console.WriteLine("\tregistration_numbers_for_vehicles_with_event_plate");
+                Console.WriteLine("\tregistration_numbers_for_vehicles_with_even_plate");
                 Console.WriteLine("\tregistration_numbers_for_vehicles_with_colour");
                 Console.WriteLine("\tslot_numbers_for_vehicles_with_colour");
                 Console.WriteLine("\tslot_number_for_registration_number");
@@ -89,7 +89,7 @@ namespace ParkingLot
                     case "registration_numbers_for_vehicles_with_odd_plate":
                         laporan.showNoPlatByOddOrEven(true);
                         break;
-                    case "registration_numbers_for_vehicles_with_event_plate":
+                    case "registration_numbers_for_vehicles_with_even_plate":
                         laporan.showNoPlatByOddOrEven(false);
                         break;
                     case "registration_numbers_for_vehicles_with_colour":
